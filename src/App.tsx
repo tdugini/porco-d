@@ -2,18 +2,9 @@ import bg from "./assets/Gesu.png";
 import "./styles/main.css";
 import { useMemo, useState } from "react";
 import "./styles/main.css";
+import { MESSAGES } from "./data/message";
 
-// lista di messaggi predefiniti
-const MESSAGES: string[] = [
-  "La semplicità è la massima sofisticazione.",
-  "Il coraggio è sapere cosa non temere.",
-  "Le piccole abitudini costruiscono grandi risultati.",
-  "Ogni giorno è una nuova possibilità.",
-  "Impara dalle versioni di te stesso di ieri.",
-  "Fai una cosa semplice, ma falla bene."
-];
 
-// funzione che restituisce un indice casuale diverso da quello corrente
 function getRandomIndex(exclude?: number) {
   if (MESSAGES.length === 1) return 0;
   let idx: number;
@@ -40,7 +31,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* pulsanti sotto l'immagine */}
       <div className="controls" role="group" aria-label="Cambia messaggio">
         <button
           type="button"
